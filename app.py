@@ -6,6 +6,8 @@ car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 
 st.header('Venta de coches')
 
+print(car_data.head(15))
+
 hist_button = st.button('Construir histograma') # crear un botón
 
 if hist_button:
