@@ -24,7 +24,7 @@ dist_button = st.button('Construir un diagrama de dispersión') # crear un botó
 if dist_button:
     st.write('Creación de un diagrama de dispersión para el conjunto de datos de anuncios de venta de coches')
     
-    fig2 = px.scatter(car_data, x="odometer")
+    fig2 = px.scatter(x=car_data, y="odometer")
     
     st.plotly_chart(fig2, use_container_width=True)
     
