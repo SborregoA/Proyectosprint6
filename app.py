@@ -14,7 +14,8 @@ if build_histogram:
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
     
 # crear un histograma
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="odometer",title= 'Distribución de kilometraje de carro')
+    fig.update_layout(xaxis_title="Kilometraje", yaxis_title="Frecuencia")
         
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -24,7 +25,8 @@ build_disp = st.checkbox('Construir un diagrama de dispersión') # casilla de se
 if build_disp:
     st.write('Creación de un diagrama de dispersión para el conjunto de datos de anuncios de venta de coches')
     
-    fig2 = px.scatter(car_data, x="odometer", y='price')
+    fig2 = px.scatter(car_data, x="odometer", y='price', title= 'Diagrama de dispersión que relaciona el odometro y precio')
+    fig2.update_layout(xaxis_title="Kilometraje", yaxis_title="Precio")
     
     st.plotly_chart(fig2, use_container_width=True)
     
