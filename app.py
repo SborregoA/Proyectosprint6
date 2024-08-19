@@ -24,7 +24,7 @@ build_disp = st.checkbox('Construir un diagrama de dispersión') # casilla de se
 if build_disp:
     st.write('Creación de un diagrama de dispersión para el conjunto de datos de anuncios de venta de coches')
     
-    fig2 = px.scatter(car_data, y="odometer")
+    fig2 = px.scatter(car_data, x="odometer", y='price')
     
     st.plotly_chart(fig2, use_container_width=True)
     
