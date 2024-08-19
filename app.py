@@ -8,9 +8,9 @@ st.header('Venta de coches')
 
 print(car_data.head(15))
 
-hist_button = st.button('Construir histograma') # crear un botón
+build_histogram = st.checkbox('Construir histograma') # crear un botón
 
-if hist_button:
+if build_histogram:
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
     
 # crear un histograma
